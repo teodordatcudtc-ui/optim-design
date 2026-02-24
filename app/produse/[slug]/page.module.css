@@ -1,0 +1,141 @@
+.page {
+  padding: var(--space-2xl) var(--space-lg);
+  min-height: 60vh;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-wood);
+  opacity: 1;
+}
+
+.sep {
+  margin: 0 var(--space-xs);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 0.55fr 0.45fr;
+    align-items: start;
+  }
+}
+
+.imageWrap {
+  aspect-ratio: 1;
+  background: var(--color-bg-alt);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details {
+  padding-top: 0;
+}
+
+@media (min-width: 768px) {
+  .details {
+    padding-top: var(--space-md);
+    position: sticky;
+    top: 6rem;
+  }
+}
+
+.category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-wood);
+  margin-bottom: var(--space-lg);
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.options {
+  margin-bottom: var(--space-lg);
+}
+
+.optionsLabel {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.colorList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.colorItem {
+  font-size: 0.9rem;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  color: var(--color-text);
+}
+
+.cta {
+  display: inline-block;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 2px;
+  transition: background var(--duration-normal) var(--ease-out-expo);
+}
+
+.cta:hover {
+  background: var(--color-accent-hover);
+  opacity: 1;
+}

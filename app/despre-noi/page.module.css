@@ -1,0 +1,64 @@
+.page {
+  padding: var(--space-2xl) var(--space-lg);
+  min-height: 60vh;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.content {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+.content p {
+  margin-bottom: var(--space-md);
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.cta {
+  margin-top: var(--space-xl);
+}
+
+.ctaLink {
+  display: inline-block;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 2px;
+  transition: background var(--duration-normal) var(--ease-out-expo);
+}
+
+.ctaLink:hover {
+  background: var(--color-accent-hover);
+  opacity: 1;
+}

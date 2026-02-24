@@ -1,0 +1,19 @@
+.skip {
+  position: absolute;
+  top: -100px;
+  left: var(--space-md);
+  z-index: 9999;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  transition: top var(--duration-fast) var(--ease-out-expo);
+}
+
+.skip:focus {
+  top: var(--space-md);
+  outline: 2px solid var(--color-wood);
+  outline-offset: 2px;
+}

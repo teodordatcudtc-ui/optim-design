@@ -1,0 +1,112 @@
+/* Asymmetric grid – breaks rhythm, premium feel */
+.section {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  background: var(--color-bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 2px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 0;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 0.45fr 0.275fr 0.275fr;
+    grid-template-rows: 1fr 1fr;
+    min-height: 520px;
+    gap: 2px;
+  }
+
+  .cellTall {
+    grid-column: 1;
+    grid-row: 1 / -1;
+  }
+
+  .cellWide {
+    grid-column: 2 / -1;
+    grid-row: 1;
+  }
+
+  .cellSquare:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .cellSquare:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
+
+.cellTall,
+.cellWide,
+.cellSquare {
+  min-height: 280px;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.imgWrap {
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg-alt);
+}
+
+.img {
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out-expo);
+}
+
+.card:hover .img {
+  transform: scale(1.06);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-lg);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.card:hover .caption {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .cellTall .card {
+    min-height: 320px;
+  }
+
+  .cellWide .card,
+  .cellSquare .card {
+    min-height: 240px;
+  }
+}
