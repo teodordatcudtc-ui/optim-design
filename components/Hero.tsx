@@ -17,6 +17,9 @@ export function Hero() {
           O colecție aleasă de mobilier pentru casă: de la living și dormitor la dining și birou.
           Calitate, design contemporan și prețuri accesibile la Optim Design, Galați.
         </p>
+        <p className={styles.subtitleShort} aria-hidden="true">
+          Mobilier living, dormitor, dining. Calitate, prețuri bune, Galați.
+        </p>
         <Link href="/produse" className={styles.cta}>
           Descoperă colecția →
         </Link>

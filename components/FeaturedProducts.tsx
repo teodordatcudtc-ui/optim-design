@@ -29,12 +29,14 @@ export function FeaturedProducts() {
                     width={400}
                     height={400}
                     className={styles.image}
-                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                    sizes="(max-width: 600px) 50vw, (max-width: 900px) 50vw, 33vw"
                   />
                 </span>
-                <span className={styles.category}>{product.category}</span>
-                <span className={styles.name}>{product.name}</span>
-                <span className={styles.price}>{product.price}</span>
+                <span className={styles.overlayText}>
+                  <span className={styles.category}>{product.category}</span>
+                  <span className={styles.name}>{product.name}</span>
+                  <span className={styles.price}>{product.price}</span>
+                </span>
               </Link>
             </li>
           ))}

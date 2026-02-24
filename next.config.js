@@ -5,6 +5,8 @@ const nextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
     ],
+    minimumCacheTTL: 60,
+    formats: ["image/avif", "image/webp"],
   },
   async redirects() {
     return [

@@ -86,6 +86,10 @@
   transform: scale(1.04);
 }
 
+.overlayText {
+  display: block;
+}
+
 .category {
   display: block;
   font-size: 0.75rem;
@@ -108,4 +112,58 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-wood);
+}
+
+/* Telefon: poză full-bleed, text peste imagine, fără chenar alb */
+@media (max-width: 600px) {
+  .card {
+    background: transparent;
+    border: none;
+  }
+
+  .card:hover {
+    box-shadow: none;
+    transform: none;
+  }
+
+  .cardLink {
+    position: relative;
+    display: block;
+    padding: 0;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  .imageWrap {
+    position: absolute;
+    inset: 0;
+    margin-bottom: 0;
+  }
+
+  .overlayText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-md);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .category {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.7rem;
+  }
+
+  .name {
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .price {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.9rem;
+  }
 }

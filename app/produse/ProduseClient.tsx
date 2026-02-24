@@ -78,6 +78,30 @@ export function ProduseClient() {
               </Link>
             ))}
           </nav>
+          <div className={styles.categorySelectWrap}>
+            <label htmlFor="category-select" className={styles.toolbarLabel}>
+              Categorie:
+            </label>
+            <select
+              id="category-select"
+              value={categorie}
+              onChange={(e) => {
+                const val = e.target.value;
+                window.location.href = val
+                  ? `/produse?categorie=${val}${sort && sort !== "default" ? `&sort=${sort}` : ""}`
+                  : "/produse";
+              }}
+              className={styles.sortSelect}
+              aria-label="Filtrare categorie"
+            >
+              <option value="">Toate</option>
+              {CATEGORIES.map((c) => (
+                <option key={c.slug} value={c.slug}>
+                  {c.label}
+                </option>
+              ))}
+            </select>
+          </div>
           <div className={styles.sortWrap}>
             <label htmlFor="sort-select" className={styles.toolbarLabel}>
               Sortare:
@@ -117,12 +141,14 @@ export function ProduseClient() {
                     width={400}
                     height={400}
                     className={styles.image}
-                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                    sizes="(max-width: 600px) 50vw, (max-width: 900px) 50vw, 33vw"
                   />
                 </span>
-                <span className={styles.category}>{product.category}</span>
-                <span className={styles.name}>{product.name}</span>
-                <span className={styles.price}>{product.price}</span>
+                <span className={styles.overlayText}>
+                  <span className={styles.category}>{product.category}</span>
+                  <span className={styles.name}>{product.name}</span>
+                  <span className={styles.price}>{product.price}</span>
+                </span>
               </Link>
             </li>
           ))}
