@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { StaticImage } from "@/components/StaticImage";
 import { FEATURED_PRODUCTS } from "@/lib/products";
 import { SITE } from "@/lib/constants";
 import styles from "./FeaturedProducts.module.css";
@@ -23,7 +23,7 @@ export function FeaturedProducts() {
             <li key={product.id} className={styles.card}>
               <Link href={product.href} className={styles.cardLink}>
                 <span className={styles.imageWrap}>
-                  <Image
+                  <StaticImage
                     src={product.image}
                     alt=""
                     width={400}

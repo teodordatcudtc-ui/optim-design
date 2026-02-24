@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { StaticImage } from "@/components/StaticImage";
 import styles from "./GalleryAsymmetric.module.css";
 
 /** Poze din public/images/categories/ – vezi public/images/CUM_ADAUGI_POZELE.md */
@@ -21,7 +21,7 @@ export function GalleryAsymmetric() {
         <div className={styles.cellTall}>
           <Link href={ITEMS[0].href} className={styles.card}>
             <span className={styles.imgWrap}>
-              <Image
+              <StaticImage
                 src={ITEMS[0].image}
                 alt=""
                 fill
@@ -36,7 +36,7 @@ export function GalleryAsymmetric() {
         <div className={styles.cellWide}>
           <Link href={ITEMS[1].href} className={styles.card}>
             <span className={styles.imgWrap}>
-              <Image
+              <StaticImage
                 src={ITEMS[1].image}
                 alt=""
                 fill
@@ -51,7 +51,7 @@ export function GalleryAsymmetric() {
         <div className={styles.cellSquare}>
           <Link href={ITEMS[2].href} className={styles.card}>
             <span className={styles.imgWrap}>
-              <Image
+              <StaticImage
                 src={ITEMS[2].image}
                 alt=""
                 fill
@@ -66,7 +66,7 @@ export function GalleryAsymmetric() {
         <div className={styles.cellSquare}>
           <Link href={ITEMS[3].href} className={styles.card}>
             <span className={styles.imgWrap}>
-              <Image
+              <StaticImage
                 src={ITEMS[3].image}
                 alt=""
                 fill

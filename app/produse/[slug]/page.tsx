@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import { StaticImage } from "@/components/StaticImage";
 import { notFound } from "next/navigation";
 import { getProductBySlug, ALL_PRODUCTS } from "@/lib/products";
 import { CATEGORIES } from "@/lib/constants";
@@ -43,14 +43,12 @@ export default async function ProdusPage({ params }: Props) {
 
         <div className={styles.grid}>
           <div className={styles.imageWrap}>
-            <Image
+            <StaticImage
               src={product.image}
               alt={product.name}
               width={800}
               height={800}
               className={styles.image}
-              priority
-              sizes="(max-width: 768px) 100vw, 55vw"
             />
           </div>
           <div className={styles.details}>

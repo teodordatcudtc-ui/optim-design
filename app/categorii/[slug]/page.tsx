@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import { StaticImage } from "@/components/StaticImage";
 import { notFound } from "next/navigation";
 import { CATEGORIES, SITE } from "@/lib/constants";
 import { FEATURED_PRODUCTS } from "@/lib/products";
@@ -55,13 +55,12 @@ export default async function CategorieSlugPage({ params }: Props) {
         </nav>
         <header className={styles.header}>
           <div className={styles.heroImage}>
-            <Image
+            <StaticImage
               src={image}
               alt=""
               fill
               className={styles.heroImg}
               sizes="(max-width: 768px) 100vw, 80vw"
-              priority
             />
           </div>
           <div className={styles.headerText}>
@@ -81,7 +80,7 @@ export default async function CategorieSlugPage({ params }: Props) {
               <li key={p.id} className={styles.card}>
                 <Link href={p.href} className={styles.cardLink}>
                   <span className={styles.imageWrap}>
-                    <Image
+                    <StaticImage
                       src={p.image}
                       alt=""
                       width={300}

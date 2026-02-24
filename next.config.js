@@ -7,6 +7,7 @@ const nextConfig = {
     ],
     minimumCacheTTL: 60,
     formats: ["image/avif", "image/webp"],
+    unoptimized: true,
   },
   async redirects() {
     return [
