@@ -66,3 +66,17 @@ Folosite în galeria de pe prima pagină și la afișarea categoriilor. Numele f
 După ce adaugi fișierele, site-ul va folosi automat aceste poze.
 
 **Notă:** Codul folosește extensia **.jpg**. Dacă pui fișiere **.png**, în `lib/products.ts` schimbă `productImage` la `.png`; pentru categorii, în `components/GalleryAsymmetric.tsx` și `app/categorii/[slug]/page.tsx` schimbă `categoryImage` la `.png`.
+
+---
+
+## Pozele nu se văd pe Vercel?
+
+1. **Asigură-te că sunt în Git:** după ce pui fișierele în `public/images/`, rulează:
+   - `git add public/images/`
+   - `git commit -m "Adaug poze produse și categorii"`
+   - `git push`
+   Vercel folosește codul din repo – dacă pozele nu sunt comise și push-uite, nu vor apărea pe site.
+
+2. **Nume exact:** pe server (Linux) numele de fișier sunt case-sensitive. Folosește exact: `scaun-ratiol.jpg`, nu `Scaun-Ratiol.jpg`.
+
+3. **Fără extensie dublă:** dacă poza se numește `sofa-comfort.jpg.png`, redeneumește-o în `sofa-comfort.jpg`.
