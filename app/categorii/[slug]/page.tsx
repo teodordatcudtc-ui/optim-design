@@ -12,12 +12,15 @@ const SLUG_TO_LABEL: Record<string, string> = Object.fromEntries(
   CATEGORIES.map((c) => [c.slug, c.label])
 );
 
+/** Poze din public/images/categories/ – vezi public/images/CUM_ADAUGI_POZELE.md */
+const categoryImage = (slug: string) => `/images/categories/${slug}.jpg`;
+
 const SLUG_IMAGES: Record<string, string> = {
-  living: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80",
-  dining: "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=1200&q=80",
-  dormitor: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=80",
-  birou: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
-  decor: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80",
+  living: categoryImage("living"),
+  dining: categoryImage("dining"),
+  dormitor: categoryImage("dormitor"),
+  birou: categoryImage("birou"),
+  decor: categoryImage("decor"),
 };
 
 export async function generateStaticParams() {

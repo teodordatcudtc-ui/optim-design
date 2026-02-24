@@ -4,35 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./GalleryAsymmetric.module.css";
 
+/** Poze din public/images/categories/ – vezi public/images/CUM_ADAUGI_POZELE.md */
+const categoryImage = (slug: string) => `/images/categories/${slug}.jpg`;
+
 const ITEMS = [
-  {
-    id: "beds",
-    title: "Colecția noastră de paturi – Confort și stil în dormitor",
-    href: "/produse?categorie=dormitor",
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80",
-    size: "tall",
-  },
-  {
-    id: "sofa",
-    title: "Colecția de sofa",
-    href: "/produse?categorie=living",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
-    size: "wide",
-  },
-  {
-    id: "tables",
-    title: "Colecția de mese",
-    href: "/produse?categorie=dining",
-    image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&q=80",
-    size: "square",
-  },
-  {
-    id: "all",
-    title: "Vezi toată colecția →",
-    href: "/produse",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80",
-    size: "square",
-  },
+  { id: "beds", title: "Colecția noastră de paturi – Confort și stil în dormitor", href: "/produse?categorie=dormitor", image: categoryImage("dormitor"), size: "tall" },
+  { id: "sofa", title: "Colecția de sofa", href: "/produse?categorie=living", image: categoryImage("living"), size: "wide" },
+  { id: "tables", title: "Colecția de mese", href: "/produse?categorie=dining", image: categoryImage("dining"), size: "square" },
+  { id: "all", title: "Vezi toată colecția →", href: "/produse", image: categoryImage("toate"), size: "square" },
 ];
 
 export function GalleryAsymmetric() {

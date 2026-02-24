@@ -45,46 +45,70 @@
   letter-spacing: 0.04em;
 }
 
+/* Pe desktop: linkuri categorii vizibile, dropdown ascuns */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
 .categorySelectWrap {
   display: none;
   align-items: center;
   gap: var(--space-sm);
 }
 
+/* Pe telefon: doar dropdown-uri, organizat într-un bloc clar */
 @media (max-width: 600px) {
   .page {
     padding: var(--space-md) 6px var(--space-2xl);
+  }
+
+  .categories {
+    display: none !important;
+  }
+
+  .categorySelectWrap {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .toolbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    align-items: end;
+    padding: var(--space-md);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    margin-bottom: var(--space-md);
+  }
+
+  .toolbarLabel {
+    display: block;
+    margin-bottom: var(--space-xs);
+  }
+
+  .categorySelectWrap,
+  .sortWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 0;
+  }
+
+  .categorySelectWrap .sortSelect,
+  .sortWrap .sortSelect {
+    width: 100%;
   }
 
   .grid {
     gap: 3px;
     padding: 0 2px;
   }
-
-  .categories {
-    display: none;
-  }
-
-  .categorySelectWrap {
-    display: flex;
-  }
-
-  .toolbar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--space-sm);
-  }
-
-  .sortWrap {
-    margin-left: 0;
-  }
-}
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-sm);
 }
 
 .filterLink,

@@ -8,9 +8,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <AboutStats />
       <FeaturedProducts />
       <GalleryAsymmetric />
+      <AboutStats />
       <CtaBanner />
     </>
   );
