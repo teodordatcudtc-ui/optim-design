@@ -40,7 +40,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
+  gap: 3px;
 }
 
 @media (min-width: 600px) {
@@ -114,8 +114,17 @@
   color: var(--color-wood);
 }
 
-/* Telefon: poză full-bleed, text peste imagine, fără chenar alb */
+/* Telefon: poze mai mari, spații mici, 2 coloane, full-bleed */
 @media (max-width: 600px) {
+  .section {
+    padding: var(--space-md) 6px;
+  }
+
+  .grid {
+    gap: 3px;
+    padding: 0 2px;
+  }
+
   .card {
     background: transparent;
     border: none;
@@ -146,7 +155,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: var(--space-md);
+    padding: var(--space-sm);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
     pointer-events: none;
   }

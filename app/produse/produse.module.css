@@ -52,6 +52,15 @@
 }
 
 @media (max-width: 600px) {
+  .page {
+    padding: var(--space-md) 6px var(--space-2xl);
+  }
+
+  .grid {
+    gap: 3px;
+    padding: 0 2px;
+  }
+
   .categories {
     display: none;
   }
@@ -136,7 +145,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
+  gap: 3px;
 }
 
 @media (min-width: 600px) {
@@ -248,7 +257,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: var(--space-md);
+    padding: var(--space-sm);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
     pointer-events: none;
   }
