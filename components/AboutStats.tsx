@@ -4,7 +4,7 @@ import styles from "./AboutStats.module.css";
 
 const STATS = [
   { value: "10+", label: "Ani de experiență" },
-  { value: "800+", label: "Produse în ofertă" },
+  { value: "500+", label: "Lucrări finalizate" },
   { value: "1200+", label: "Clienți mulțumiți" },
 ];
 
@@ -18,8 +18,8 @@ export function AboutStats() {
           </h2>
           <p className={styles.text}>
             Credem că mobilierul de calitate este cheia unei case frumoase și funcționale.
-            Cu pasiune pentru design și meșteșug, combinăm estetica modernă cu eleganța atemporală.
-            La Optim Design găsești mobilier pentru living, dormitor, dining și birou – toate la un loc, în Galați.
+            Cu pasiune pentru design și meșteșug, producem mobilier la comandă: băi, bucătării, living, dormitor, birouri.
+            Amenajări interioare personalizate, execuție de calitate – Optim Design, Galați.
           </p>
         </div>
         <div className={styles.stats} role="list">

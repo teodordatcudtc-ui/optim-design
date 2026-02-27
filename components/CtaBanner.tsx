@@ -12,8 +12,8 @@ export function CtaBanner() {
           Creează-ți mobilierul ideal azi
         </h2>
         <p className={styles.text}>
-          De la living la dormitor și dining – găsești mobilier de calitate, design contemporan
-          și prețuri corecte. Vizitează-ne în Galați sau contactează-ne pentru oferte.
+          Mobilier la comandă – băi, bucătării, living, dormitor, spații comerciale.
+          Contactează-ne pentru o ofertă personalizată sau vizitează-ne în Galați.
         </p>
         <Link href="/contact" className={styles.cta}>
           Contact

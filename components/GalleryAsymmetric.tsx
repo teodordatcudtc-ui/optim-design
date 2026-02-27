@@ -8,15 +8,20 @@ import styles from "./GalleryAsymmetric.module.css";
 const categoryImage = (slug: string) => `/images/categories/${slug}.jpg`;
 
 const ITEMS = [
-  { id: "beds", title: "Colecția noastră de paturi – Confort și stil în dormitor", href: "/produse?categorie=dormitor", image: categoryImage("dormitor"), size: "tall" },
-  { id: "sofa", title: "Colecția de sofa", href: "/produse?categorie=living", image: categoryImage("living"), size: "wide" },
-  { id: "tables", title: "Colecția de mese", href: "/produse?categorie=dining", image: categoryImage("dining"), size: "square" },
-  { id: "all", title: "Vezi toată colecția →", href: "/produse", image: categoryImage("toate"), size: "square" },
+  { id: "dormitor", title: "Dormitor & Dressing – mobilier la comandă", href: "/lucrari?categorie=dormitor", image: categoryImage("dormitor"), size: "tall" },
+  { id: "living", title: "Living & Sufragerie – amenajări complete", href: "/lucrari?categorie=living", image: categoryImage("living"), size: "wide" },
+  { id: "bucatarii", title: "Bucătării – mobilier L și insulă", href: "/lucrari?categorie=bucatarii", image: categoryImage("bucatarii"), size: "square" },
+  { id: "all", title: "Vezi toate lucrările →", href: "/lucrari", image: categoryImage("toate"), size: "square" },
 ];
 
 export function GalleryAsymmetric() {
   return (
-    <section className={styles.section} aria-label="Galerie inspirație">
+    <section className={styles.section} aria-labelledby="gallery-heading">
+      <div className={styles.headerWrap}>
+        <h2 id="gallery-heading" className={styles.heading}>
+          Explorează categoriile
+        </h2>
+      </div>
       <div className={styles.grid}>
         <div className={styles.cellTall}>
           <Link href={ITEMS[0].href} className={styles.card}>

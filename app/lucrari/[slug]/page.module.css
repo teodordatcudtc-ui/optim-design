@@ -80,13 +80,6 @@
   line-height: 1.2;
 }
 
-.price {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-wood);
-  margin-bottom: var(--space-lg);
-}
-
 .desc {
   font-size: 1rem;
   line-height: 1.65;
@@ -94,48 +87,60 @@
   margin-bottom: var(--space-lg);
 }
 
-.options {
-  margin-bottom: var(--space-lg);
+.specs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
 }
 
-.optionsLabel {
-  display: block;
+.specRow {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-md);
+  align-items: baseline;
+}
+
+.specLabel {
   font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: var(--color-text-muted);
-  margin-bottom: var(--space-sm);
 }
 
-.colorList {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-}
-
-.colorItem {
-  font-size: 0.9rem;
-  padding: var(--space-xs) var(--space-sm);
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
-  border-radius: 2px;
+.specValue {
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: var(--color-text);
+  margin: 0;
+}
+
+.ctaWrap {
+  margin-top: 0;
 }
 
 .cta {
   display: inline-block;
-  padding: var(--space-md) var(--space-lg);
-  background: var(--color-accent);
-  color: var(--color-bg);
-  font-weight: 600;
-  font-size: 0.95rem;
-  border-radius: 2px;
-  transition: background var(--duration-normal) var(--ease-out-expo);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-wood);
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--color-wood);
+  transition: color var(--duration-fast), border-color var(--duration-fast);
 }
 
 .cta:hover {
-  background: var(--color-accent-hover);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
   opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .specRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
 }

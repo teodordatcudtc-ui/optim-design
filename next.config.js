@@ -11,8 +11,10 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      { source: "/categorii", destination: "/produse", permanent: true },
-      { source: "/categorii/:slug", destination: "/produse?categorie=:slug", permanent: true },
+      { source: "/produse", destination: "/lucrari", permanent: true },
+      { source: "/produse/:path*", destination: "/lucrari", permanent: true },
+      { source: "/categorii", destination: "/lucrari", permanent: true },
+      { source: "/categorii/:slug", destination: "/lucrari?categorie=:slug", permanent: true },
     ];
   },
 };

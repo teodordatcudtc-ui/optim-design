@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Optim Design",
-  shortDesc: "Magazin de mobilier",
+  shortDesc: "Producător de mobilier la comandă, Galați",
   phone: "0740214968",
   address: "Zona Metro, Strada Ioan Cetățianu Hală 60, 800198 Galați",
   email: "contact@optimdesign.ro",
@@ -13,15 +13,23 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { href: "/", label: "Acasă" },
-  { href: "/produse", label: "Produse" },
+  { href: "/lucrari", label: "Lucrări realizate" },
   { href: "/despre-noi", label: "Despre noi" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
+export const LEGAL_LINKS = [
+  { href: "/termeni-si-conditii", label: "Termeni și condiții" },
+  { href: "/politica-confidentialitate", label: "Confidențialitate" },
+  { href: "/politica-cookies", label: "Cookie-uri" },
+] as const;
+
+/** Categorii pentru lucrări realizate (proiecte) */
 export const CATEGORIES = [
-  { slug: "living", label: "Living & Sofa", href: "/produse?categorie=living" },
-  { slug: "dining", label: "Dining", href: "/produse?categorie=dining" },
-  { slug: "dormitor", label: "Dormitor", href: "/produse?categorie=dormitor" },
-  { slug: "birou", label: "Birou & Comode", href: "/produse?categorie=birou" },
-  { slug: "decor", label: "Decor & Oglinzi", href: "/produse?categorie=decor" },
+  { slug: "bai", label: "Băi", href: "/lucrari?categorie=bai" },
+  { slug: "bucatarii", label: "Bucătării", href: "/lucrari?categorie=bucatarii" },
+  { slug: "living", label: "Living & Sufragerie", href: "/lucrari?categorie=living" },
+  { slug: "dormitor", label: "Dormitor & Dressing", href: "/lucrari?categorie=dormitor" },
+  { slug: "birou", label: "Birouri", href: "/lucrari?categorie=birou" },
+  { slug: "spatial-comerciale", label: "Spații comerciale", href: "/lucrari?categorie=spatial-comerciale" },
 ] as const;

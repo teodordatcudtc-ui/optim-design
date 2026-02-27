@@ -132,11 +132,30 @@
   color: rgba(250, 249, 247, 0.85);
 }
 
-.copyright {
+.legalNav {
   position: relative;
   z-index: 1;
   max-width: 1200px;
   margin: var(--space-lg) auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.legalLink {
+  font-size: 0.8rem;
+  color: rgba(250, 249, 247, 0.7);
+}
+
+.legalLink:hover {
+  color: rgba(250, 249, 247, 0.95);
+}
+
+.copyright {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: var(--space-md) auto 0;
   font-size: 0.8rem;
   color: rgba(250, 249, 247, 0.6);
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { SITE, NAV_LINKS } from "@/lib/constants";
+import { SITE, NAV_LINKS, LEGAL_LINKS } from "@/lib/constants";
+import { NewsletterForm } from "@/components/NewsletterForm";
 import styles from "./Footer.module.css";
 
 export function Footer() {
@@ -38,27 +39,7 @@ export function Footer() {
         <div className={styles.block}>
           <h3 className={styles.title}>Newsletter</h3>
           <p className={styles.newsletterText}>Abonează-te la oferte și noutăți.</p>
-          <form
-            className={styles.newsletterForm}
-            action="#"
-            method="post"
-            aria-label="Abonare newsletter"
-          >
-            <label htmlFor="footer-email" className="visually-hidden">
-              Email
-            </label>
-            <input
-              id="footer-email"
-              type="email"
-              name="email"
-              placeholder="Email"
-              required
-              className={styles.input}
-            />
-            <button type="submit" className={styles.submit}>
-              Abonare
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
       </div>
       <nav className={styles.footerNav} aria-label="Navigație footer">
@@ -69,6 +50,13 @@ export function Footer() {
             </li>
           ))}
         </ul>
+      </nav>
+      <nav className={styles.legalNav} aria-label="Pagini legale">
+        {LEGAL_LINKS.map(({ href, label }) => (
+          <Link key={href} href={href} className={styles.legalLink}>
+            {label}
+          </Link>
+        ))}
       </nav>
       <p className={styles.copyright}>
         © {new Date().getFullYear()} {SITE.name}. Toate drepturile rezervate.

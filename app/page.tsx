@@ -1,15 +1,17 @@
 import { Hero } from "@/components/Hero";
 import { AboutStats } from "@/components/AboutStats";
-import { FeaturedProducts } from "@/components/FeaturedProducts";
+import { FeaturedLucrari } from "@/components/FeaturedLucrari";
 import { GalleryAsymmetric } from "@/components/GalleryAsymmetric";
+import { Servicii } from "@/components/Servicii";
 import { CtaBanner } from "@/components/CtaBanner";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <FeaturedProducts />
+      <FeaturedLucrari />
       <GalleryAsymmetric />
+      <Servicii />
       <AboutStats />
       <CtaBanner />
     </>
