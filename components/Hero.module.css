@@ -132,6 +132,10 @@
   transition: background var(--duration-normal) var(--ease-out-expo);
 }
 
+.ctaPrimaryShort {
+  display: none;
+}
+
 .ctaPrimary:hover {
   background: var(--color-accent-hover);
   opacity: 1;
@@ -232,14 +236,51 @@
 
   .ctaWrap {
     justify-content: center;
+    flex-wrap: nowrap;
+    gap: var(--space-sm);
+  }
+
+  .ctaPrimary {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.875rem;
+  }
+
+  .ctaPrimaryLong {
+    display: none;
+  }
+
+  .ctaPrimaryShort {
+    display: inline;
+  }
+
+  .ctaSecondary {
+    font-size: 0.875rem;
+    white-space: nowrap;
   }
 
   .stats {
     justify-content: center;
+    flex-wrap: nowrap;
+    gap: var(--space-sm);
+    padding-top: var(--space-sm);
+    margin-top: var(--space-sm);
+  }
+
+  .stat {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .stat:not(:last-child) {
+    padding-right: var(--space-sm);
   }
 
   .statValue {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .statLabel {
+    font-size: 0.65rem;
   }
 
   .bgImage {

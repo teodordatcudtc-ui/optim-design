@@ -28,7 +28,8 @@ export function Hero() {
         </p>
         <div className={styles.ctaWrap}>
           <Link href="/lucrari" className={styles.ctaPrimary}>
-            Vezi lucrările realizate →
+            <span className={styles.ctaPrimaryLong}>Vezi lucrările realizate →</span>
+            <span className={styles.ctaPrimaryShort}>Lucrări →</span>
           </Link>
           <Link href="/despre-noi" className={styles.ctaSecondary}>
             Despre noi ↗
